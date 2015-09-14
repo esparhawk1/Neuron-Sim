@@ -1,0 +1,23 @@
+Can't simply create one then create it's 5 neighbors, will simply make a tree that splits 5 ways at each layer. Need some form to go back and forth.
+
+Struct with:
+int val;
+int* adj;
+Will be the neuron potential and location of the first node holding the key of its neighbor. 
+
+[0]|[key,next*] - [key,next*] - [key,next*] - [key,next*] - [key,next*]
+[1]|[key,next*] - [key,next*] - [key,next*] - [key,next*] - [key,next*]
+[2]|[key,next*] - [key,next*] - [key,next*] - [key,next*] - [key,next*]
+[3]|[key,next*] - [key,next*] - [key,next*] - [key,next*] - [key,next*]
+[4]|[key,next*] - [key,next*] - [key,next*] - [key,next*] - [key,next*]
+[5]|[key,next*] - [key,next*] - [key,next*] - [key,next*] - [key,next*]
+[6]|[key,next*] - [key,next*] - [key,next*] - [key,next*] - [key,next*]
+[7]|[key,next*] - [key,next*] - [key,next*] - [key,next*] - [key,next*]
+.
+.
+.
+[2500]|[key,next*] - [key,next*] - [key,next*] - [key,next*] - [key,next*]
+
+Use adjacency table to create the network of neurons.
+2500 nodes, each one will have EXACTLY 5 neighbors.
+Array of 2500 structures could be rough? 
